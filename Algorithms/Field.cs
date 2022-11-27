@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SimpleAlgorithms
+namespace Algorithms
 {
     public class Field<T> : IMatrix<T>
     {

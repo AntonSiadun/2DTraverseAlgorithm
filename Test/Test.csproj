@@ -41,9 +41,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SimpleAlgorithms\SimpleAlgorithms.csproj">
-      <Project>{9758C659-590B-43C7-B0AD-CCE9F4526397}</Project>
-      <Name>SimpleAlgorithms</Name>
+    <ProjectReference Include="..\Algorithms\Algorithms.csproj">
+      <Name>Algorithms</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

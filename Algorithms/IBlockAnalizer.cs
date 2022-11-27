@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SimpleAlgorithms
+namespace Algorithms
 {
     public interface IBlockAnalizer
     {

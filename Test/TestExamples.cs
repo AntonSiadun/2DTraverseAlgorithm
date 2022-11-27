@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using SimpleAlgorithms;
+using Algorithms;
 
 namespace Test
 {

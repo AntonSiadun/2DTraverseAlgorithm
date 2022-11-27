@@ -1,4 +1,4 @@
-﻿namespace SimpleAlgorithms
+﻿namespace Algorithms
 {
     public struct Vector2Int
     {

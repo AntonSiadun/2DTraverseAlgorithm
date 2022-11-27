@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SimpleAlgorithms
+namespace Algorithms
 {
     public class RecursionBlockAnalizer<T> : IBlockAnalizer
     {

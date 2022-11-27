@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using SimpleAlgorithms;
+using Algorithms;
 using System.Collections.Generic;
 using System.Linq;
 

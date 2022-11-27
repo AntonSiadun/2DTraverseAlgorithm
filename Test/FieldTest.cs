@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
-using SimpleAlgorithms;
+using Algorithms;
 
 namespace Test
 {

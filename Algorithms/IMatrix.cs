@@ -1,4 +1,4 @@
-﻿namespace SimpleAlgorithms
+﻿namespace Algorithms
 {
     public interface IMatrix<T>
     {
