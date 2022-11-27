@@ -42,6 +42,18 @@ namespace Test
             }
         }
 
+        [Test]
+        public void Finding_FieldContainsSeveralBlocks_ReturnsBlocks()
+        {
+            var field = new Field<int>(_examples.ElementAt(1).Key);
+            var analizer = new RecursionBlockAnalizer<int>(field);
+            List<List<Vector2Int>> expected = new List<List<Vector2Int>> { new List<Vector2Int>{ new Vector2Int(0, 0), new Vector2Int(0, 1), new Vector2Int(0, 2), new Vector2Int(1, 1) },
+                                    new List<Vector2Int>{ new Vector2Int(1, 0)},
+                                    new List<Vector2Int>{ new Vector2Int(1, 2)} };
+
+            Assert.AreEqual(expected, analizer.GetAllBlocks());         
+        }
+
         //Checking
         [Test]
         public void Checking_IsInBlock_ReturnTrue()
