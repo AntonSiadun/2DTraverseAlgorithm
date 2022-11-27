@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SimpleAlgorithms
 {
@@ -15,9 +16,27 @@ namespace SimpleAlgorithms
             _field = field;
         }
 
-        public HashSet<Vector2Int>[] GetAllBlocks()
+        public List<List<Vector2Int>> GetAllBlocks()
         {
-            throw new NotImplementedException();
+            var verified = new List<Vector2Int>();
+            List<List<Vector2Int>> result = new List<List<Vector2Int>>();
+
+            for(int i = 0; i < _field.Height; i++)
+            {
+                for (int j = 0; j < _field.Width; j++)
+                {
+                    var position = new Vector2Int(i, j);
+
+                    if (verified.Contains(position))
+                        continue;
+
+                    var block = GetIncludedBlock(position);
+                    result.Add(block.ToList());
+
+                    verified.AddRange(block.ToList());
+                }
+            }
+            return result;
         }
 
         public HashSet<Vector2Int> GetIncludedBlock(Vector2Int position)
