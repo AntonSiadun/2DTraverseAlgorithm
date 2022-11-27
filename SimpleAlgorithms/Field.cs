@@ -4,7 +4,7 @@ namespace SimpleAlgorithms
 {
     public class Field<T> : IMatrix<T>
     {
-        private T[,] _array;
+        private readonly T[,] _array;
 
         public Field(int width, int height)
         {
@@ -14,10 +14,15 @@ namespace SimpleAlgorithms
             _array = new T[width, height];
         }
 
-        public T this[int row, int column]
+        public Field(T[,] array)
         {
-            get => _array[row, column];
-            set => _array[row, column] = value;
+            _array = array.Clone() as T[,];
+        }
+
+        public T this[Vector2Int position]
+        {
+            get => _array[position.Row, position.Column];
+            set => _array[position.Row, position.Column] = value;
         }
 
         public int Width => _array.GetLength(1);
@@ -25,15 +30,7 @@ namespace SimpleAlgorithms
 
         public T[,] GetArray()
         {
-            T[,] result = new T[Height, Width];
-
-            for(int i = 0; i < Height; i++)
-            {
-                for(int j = 0; j < Width; j++)
-                {
-                    result[i, j] = _array[i, j];
-                }
-            }
+            T[,] result = _array.Clone() as T[,];
             return result;
         }
     }
